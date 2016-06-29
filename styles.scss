@@ -14,104 +14,123 @@ body {
 
 	.timeline {
 		float: left;
-		margin-left: 200px;
+		padding-left: 200px;
+		position: relative;
 
-		.month {
-			border-left: 2px solid $dark_blue;
+		.months {
 			float: left;
 
-			&:last-child {
-				border-right: 2px solid $dark_blue;
-			}
-
-			> .name {
-				background-color: $dark_blue;
-				color: #fff;
-				float: left;
-				font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-				padding: 5px 0;
-				text-align: center;
-				width: 100%;
-			}
-			.days {
-				clear: both;
+			.month {
+				border-left: 2px solid $dark_blue;
 				float: left;
 
-				.day {
-					border-right: 2px solid rgba(0, 0, 0, 0.05);
+				&:last-child {
+					border-right: 2px solid $dark_blue;
+				}
+
+				> .name {
+					background-color: $dark_blue;
+					color: #fff;
+					float: left;
+					font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+					padding: 5px 0;
+					text-align: center;
+					width: 100%;
+				}
+				.days {
+					clear: both;
 					float: left;
 
-					&.friday {
-						border-right: 2px solid rgba(0, 0, 0, 0.25);
-					}
-					&:last-child {
-						border-right: 0;
-					}
-
-					> .name {
-						border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-						color: rgba(0, 0, 0, 0.87);
+					.day {
+						border-right: 2px solid rgba(0, 0, 0, 0.05);
 						float: left;
-						font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-						padding: 5px 0;
-						text-align: center;
-						width: 100%;
 
-						span {
-							color: rgba(0, 0, 0, 0.38);
-							font-size: 0.7em;
-							text-transform: uppercase;
+						&.friday {
+							border-right: 2px solid rgba(0, 0, 0, 0.25);
 						}
-					}
-					.hours {
-						clear: both;
-						float: left;
+						&:last-child {
+							border-right: 0;
+						}
 
-						.hour {
-							border-right: 2px dashed rgba(0, 0, 0, 0.05);
+						> .name {
+							border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+							color: rgba(0, 0, 0, 0.87);
 							float: left;
-							height: 200px;
-							width: $hours_width;
+							font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+							padding: 5px 0;
+							text-align: center;
+							width: 100%;
 
-							&:last-child {
-								border-right: 0;
+							span {
+								color: rgba(0, 0, 0, 0.38);
+								font-size: 0.7em;
+								text-transform: uppercase;
+								vertical-align: baseline;
+							}
+						}
+						.hours {
+							clear: both;
+							float: left;
+
+							.hour {
+								border-right: 2px dashed rgba(0, 0, 0, 0.05);
+								float: left;
+								height: 400px;
+								width: $hours_width;
+
+								&:last-child {
+									border-right: 0;
+								}
 							}
 						}
 					}
 				}
 			}
 		}
-	}
+		.developers {
+			position: absolute;
+			left: 0px;
+			top: 63px;
 
-	.developer {
-		float: left;
-		width: 100%;
-
-		h2 {
-			float: left;
-			font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-			padding: 5px 0;
-			width: 200px;
-		}
-		.tasks {
-			float: left;
-
-			.task {
-				border-radius: 5px;
-				color: #fff;
+			.developer {
 				float: left;
-				font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-				margin-right: $hours_gutter;
-				padding: 5px;
+				padding: 10px 0;
+				width: 100%;
 
-				&.red {
-					background-color: $red;
+				&:nth-child(2n) {
+					background-color: rgba(0, 0, 0, 0.05);
 				}
-				&.dark_blue {
-					background-color: $dark_blue;
+
+				.name {
+					color: rgba(0, 0, 0, 0.87);
+					float: left;
+					font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+					padding: 5px;
+					width: 202px;
 				}
-				&.dark_green {
-					background-color: $dark_green;
+				.tasks {
+					float: left;
+
+					.task {
+						border-radius: 5px;
+						color: #fff;
+						float: left;
+						font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+						margin-right: $hours_gutter;
+						overflow: hidden;
+						padding: 5px;
+						white-space: nowrap;
+
+						&.red {
+							background-color: $red;
+						}
+						&.dark_blue {
+							background-color: $dark_blue;
+						}
+						&.dark_green {
+							background-color: $dark_green;
+						}
+					}
 				}
 			}
 		}
