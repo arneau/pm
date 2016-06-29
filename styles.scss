@@ -1,8 +1,5 @@
 @import 'styles/reset.css';
-
-$hours_width: 15px;
-$hours_gutter: $hours_width / 2;
-$hours_per_day: 6;
+@import 'styles/config';
 
 body {
 	background-color: rgba(0, 0, 0, 0.05);
@@ -17,14 +14,21 @@ body {
 
 	.timeline {
 		float: left;
+		margin-left: 200px;
 
 		.month {
+			border-left: 2px solid $dark_blue;
 			float: left;
 
-			h2 {
-				background-color: rgba(0, 0, 0, 0.05);
+			&:last-child {
+				border-right: 2px solid $dark_blue;
+			}
+
+			> .name {
+				background-color: $dark_blue;
+				color: #fff;
 				float: left;
-				font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+				font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
 				padding: 5px 0;
 				text-align: center;
 				width: 100%;
@@ -33,26 +37,81 @@ body {
 				clear: both;
 				float: left;
 
-				.divider {
-					background-color: rgba(0, 0, 0, 0.05);
-					float: left;
-					height: 200px;
-					margin: 0 $hours_gutter / 4;
-					width: $hours_gutter / 2;
-				}
 				.day {
+					border-right: 2px solid rgba(0, 0, 0, 0.05);
 					float: left;
-					height: 200px;
-					font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-					padding: 5px 0;
-					text-align: center;
-					width: $hours_width * $hours_per_day + $hours_gutter * ($hours_per_day - 1);
 
-					small {
-						color: rgba(0, 0, 0, 0.37);
-						font-size: 0.7em;
-						text-transform: uppercase;
+					&.friday {
+						border-right: 2px solid rgba(0, 0, 0, 0.25);
 					}
+					&:last-child {
+						border-right: 0;
+					}
+
+					> .name {
+						border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+						color: rgba(0, 0, 0, 0.87);
+						float: left;
+						font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+						padding: 5px 0;
+						text-align: center;
+						width: 100%;
+
+						span {
+							color: rgba(0, 0, 0, 0.38);
+							font-size: 0.7em;
+							text-transform: uppercase;
+						}
+					}
+					.hours {
+						clear: both;
+						float: left;
+
+						.hour {
+							border-right: 2px dashed rgba(0, 0, 0, 0.05);
+							float: left;
+							height: 200px;
+							width: $hours_width;
+
+							&:last-child {
+								border-right: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.developer {
+		float: left;
+		width: 100%;
+
+		h2 {
+			float: left;
+			font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+			padding: 5px 0;
+			width: 200px;
+		}
+		.tasks {
+			float: left;
+
+			.task {
+				border-radius: 5px;
+				color: #fff;
+				float: left;
+				font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+				margin-right: $hours_gutter;
+				padding: 5px;
+
+				&.red {
+					background-color: $red;
+				}
+				&.dark_blue {
+					background-color: $dark_blue;
+				}
+				&.dark_green {
+					background-color: $dark_green;
 				}
 			}
 		}
