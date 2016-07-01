@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database defaultIdMethod="native" name="default">
+	<behavior name="auto_add_pk" />
+	<table name="task">
+		<column name="colour" required="true" size="255" type="varchar" />
+		<column name="description" required="true" size="255" type="varchar" />
+		<column name="developer" required="true" size="255" type="varchar" />
+		<column name="hours_estimated" required="true" size="11" type="integer" />
+		<column name="hours_spent" size="11" type="integer" />
+		<column name="priority" size="11" type="integer" />
+	</table>
+</database>

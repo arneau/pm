@@ -1,34 +1,32 @@
 <?
 
+require 'vendor/autoload.php';
+require 'generated-conf/config.php';
+
+//$task = new Task();
+//$task->setColour('red')
+//	->setDescription('Do something')
+//	->setDeveloper('Niko')
+//	->setHoursEstimated(4)
+//	->setPriority(1)
+//	->save();
+
 $hours_width = 25;
 $hours_gutter = 2;
-$hours_per_day = 8;
+$hours_per_day = 6;
 
 $months_to_display = [
 	'July',
 	'August',
 ];
 
+$tasks = TaskQuery::create()
+	->filterByDeveloper('Niko')
+	->orderByPriority()
+	->find()
+	->toArray();
 $developers_tasks = [
-	'Niko' => [
-		[
-			'colour' => 'red',
-			'hours_estimated' => 4,
-			'hours_taken' => 4,
-			'description' => 'Do something',
-		],
-		[
-			'colour' => 'red',
-			'hours_estimated' => 6,
-			'hours_taken' => 8,
-			'description' => 'Do something else',
-		],
-		[
-			'colour' => 'dark_blue',
-			'hours_estimated' => 2,
-			'description' => 'Do nothing',
-		],
-	],
+	'Niko' => $tasks
 ];
 
 ?>
@@ -111,10 +109,10 @@ s;
 
 				foreach ($developer_tasks as $developer_task_data) {
 
-					$developer_task_width = $hours_width * $developer_task_data['hours'] + $hours_gutter * ($developer_task_data['hours'] - 1);
+					$developer_task_width = $hours_width * $developer_task_data['HoursEstimated'] + $hours_gutter * ($developer_task_data['HoursEstimated'] - 1);
 
 					echo <<<s
-					<div class="task {$developer_task_data['colour']}" style="width: {$developer_task_width}px;" title="{$developer_task_data['description']}">{$developer_task_data['description']}</div>
+					<div class="task {$developer_task_data['Colour']}" style="width: {$developer_task_width}px;" title="{$developer_task_data['Description']}">{$developer_task_data['Description']}</div>
 s;
 
 				}
