@@ -1,8 +1,14 @@
-@import 'styles/reset.css';
 @import 'styles/config';
 
+* {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 body {
-	background-color: rgba(0, 0, 0, 0.05);
 	padding: 20px;
 }
 
@@ -10,87 +16,71 @@ body {
 	background-color: #fff;
 	float: left;
 	padding: 20px;
-	width: 10000px;
+	width: 14000px;
 
 	.timeline {
 		float: left;
 		padding-left: 200px;
 		position: relative;
+		width: 100%;
 
-		.months {
+		.days {
 			float: left;
 
-			.month {
-				border-left: 2px solid $dark_blue;
+			.day {
 				float: left;
 
-				&:last-child {
-					border-right: 2px solid $dark_blue;
+				&.friday {
+
+					.hours {
+
+						.hour {
+
+							&:last-child {
+								border-right: $hours_gutter solid rgba(0, 0, 0, 0.25);
+							}
+						}
+					}
 				}
 
 				> .name {
-					background-color: $dark_blue;
-					color: #fff;
+					border-bottom: $hours_gutter solid rgba(0, 0, 0, 0.25);
+					color: rgba(0, 0, 0, 0.87);
 					float: left;
-					font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+					font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
 					padding: 5px 0;
 					text-align: center;
 					width: 100%;
+
+					span {
+						color: rgba(0, 0, 0, 0.38);
+						font-size: 0.7em;
+						text-transform: uppercase;
+						vertical-align: baseline;
+					}
 				}
-				.days {
+				.hours {
 					clear: both;
 					float: left;
 
-					.day {
-						border-right: 2px solid rgba(0, 0, 0, 0.05);
+					.hour {
+						border-right: $hours_gutter dashed rgba(0, 0, 0, 0.05);
 						float: left;
+						height: 400px;
+						width: $hours_width + $hours_gutter;
 
-						&.friday {
-							border-right: 2px solid rgba(0, 0, 0, 0.25);
-						}
 						&:last-child {
-							border-right: 0;
-						}
-
-						> .name {
-							border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-							color: rgba(0, 0, 0, 0.87);
-							float: left;
-							font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
-							padding: 5px 0;
-							text-align: center;
-							width: 100%;
-
-							span {
-								color: rgba(0, 0, 0, 0.38);
-								font-size: 0.7em;
-								text-transform: uppercase;
-								vertical-align: baseline;
-							}
-						}
-						.hours {
-							clear: both;
-							float: left;
-
-							.hour {
-								border-right: 2px dashed rgba(0, 0, 0, 0.05);
-								float: left;
-								height: 400px;
-								width: $hours_width;
-
-								&:last-child {
-									border-right: 0;
-								}
-							}
+							border-right-style: solid;
 						}
 					}
 				}
 			}
 		}
+
 		.developers {
 			position: absolute;
 			left: 0px;
-			top: 63px;
+			top: 35px;
 
 			.developer {
 				float: left;
@@ -106,7 +96,7 @@ body {
 					float: left;
 					font: bold 1em Helvetica Neue, Helvetica, Arial, sans-serif;
 					padding: 5px;
-					width: 202px;
+					width: 200px;
 				}
 				.tasks {
 					float: left;
@@ -124,8 +114,11 @@ body {
 						&.red {
 							background-color: $red;
 						}
-						&.yellow {
-							background-color: $yellow;
+						&.pink {
+							background-color: $pink;
+						}
+						&.light_purple {
+							background-color: $light_purple;
 						}
 						&.dark_blue {
 							background-color: $dark_blue;
@@ -133,9 +126,13 @@ body {
 						&.dark_green {
 							background-color: $dark_green;
 						}
+						&.yellow {
+							background-color: $yellow;
+						}
 					}
 				}
 			}
 		}
 	}
+
 }

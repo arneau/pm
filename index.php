@@ -3,14 +3,6 @@
 require 'vendor/autoload.php';
 require 'generated-conf/config.php';
 
-//$task = new Task();
-//$task->setColour('red')
-//	->setDescription('Do something')
-//	->setDeveloper('Niko')
-//	->setHoursEstimated(4)
-//	->setPriority(1)
-//	->save();
-
 $hours_width = 30;
 $hours_gutter = 2;
 $hours_per_day = 6;
@@ -18,77 +10,64 @@ $hours_per_day = 6;
 $months_to_display = [
 	'July',
 	'August',
+	'September',
 ];
 
-$tasks = TaskQuery::create()
-	->filterByDeveloper('Niko')
+$tasks_datas = TaskQuery::create()
 	->orderByPriority()
 	->find()
 	->toArray();
-$developers_tasks = [
-	'Niko' => $tasks
-];
+foreach ($tasks_datas as $task_data) {
+	$developers_tasks[$task_data['Developer']][] = $task_data;
+}
 
 ?>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+	<link href="reset.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="styles.css" media="all" rel="stylesheet" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 </head>
 <body>
 <div class="project">
 	<div class="timeline">
-		<div class="months">
+		<div class="days">
 
 			<?
 
-			foreach ($months_to_display as $month) {
+			$start_date = new DateTime('2016-07-04');
+			$end_date = new DateTime('2016-09-30');
+			$dates_objects = new DatePeriod($start_date, new DateInterval('P1D'), $end_date);
 
-				echo <<<s
-			<div class="month">
-				<h6 class="name">{$month}</h6>
-				<div class="days">
+			foreach ($dates_objects as $date_object) {
+
+				if (!in_array($date_object->format('w'), [
+					0,
+					6,
+				])
+				) {
+
+					$day_name = strtolower($date_object->format('l'));
+
+					echo <<<s
+					<div class="day {$day_name}">
+						<h6 class="name">
+							{$date_object->format('F d')}
+							<span>({$date_object->format('D')})</span>
+						</h6>
+						<div class="hours">
 s;
 
-				$days_in_month = date('t', strtotime($month . ' 2016')) * 1;
+					echo str_repeat('<div class="hour"></div>', $hours_per_day);
 
-				for ($date = 1; $date <= $days_in_month; $date++) {
-
-					$day_object = new DateTime($date . ' ' . $month . ' 2016');
-
-					if (!in_array($day_object->format('w'), [
-						0,
-						6,
-					])
-					) {
-
-						$day_name = strtolower($day_object->format('l'));
-
-						echo <<<s
-						<div class="day {$day_name}">
-							<h6 class="name">
-								{$day_object->format('d')}
-								<span>({$day_object->format('D')})</span>
-							</h6>
-							<div class="hours">
-s;
-
-						echo str_repeat('<div class="hour"></div>', $hours_per_day);
-
-						echo <<<s
-							</div>
+					echo <<<s
 						</div>
+					</div>
 s;
-
-					}
 
 				}
-
-				echo <<<s
-				</div>
-			</div>
-s;
 
 			}
 
