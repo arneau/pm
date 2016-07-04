@@ -11,7 +11,7 @@ require 'generated-conf/config.php';
 //	->setPriority(1)
 //	->save();
 
-$hours_width = 25;
+$hours_width = 30;
 $hours_gutter = 2;
 $hours_per_day = 6;
 

@@ -115,7 +115,7 @@ body {
 						border-radius: 5px;
 						color: #fff;
 						float: left;
-						font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+						font: 0.8em Helvetica Neue, Helvetica, Arial, sans-serif;
 						margin-right: $hours_gutter;
 						overflow: hidden;
 						padding: 5px;
@@ -123,6 +123,9 @@ body {
 
 						&.red {
 							background-color: $red;
+						}
+						&.yellow {
+							background-color: $yellow;
 						}
 						&.dark_blue {
 							background-color: $dark_blue;
