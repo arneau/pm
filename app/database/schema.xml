@@ -5,8 +5,8 @@
 		<column name="colour" required="true" size="255" type="varchar" />
 		<column name="description" required="true" size="255" type="varchar" />
 		<column name="developer" required="true" size="255" type="varchar" />
-		<column name="hours_estimated" required="true" size="11" type="integer" />
-		<column name="hours_spent" size="11" type="integer" />
+		<column name="hours_estimated" required="true" scale="2" size="5" type="decimal" />
+		<column name="hours_spent" scale="2" size="5" type="decimal" />
 		<column name="priority" scale="2" size="5" type="decimal" />
 	</table>
 </database>

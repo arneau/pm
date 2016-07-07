@@ -20,6 +20,12 @@ $tasks_datas = TaskQuery::create()
 foreach ($tasks_datas as $task_data) {
 	$developers_tasks[$task_data['Developer']][] = $task_data;
 }
+$developers_tasks = [
+	'Niko' => $developers_tasks['Niko'],
+	'Arneau' => $developers_tasks['Arneau'],
+	'Julien' => $developers_tasks['Julien'],
+	'Alexis' => $developers_tasks['Alexis'],
+]
 
 ?>
 
@@ -88,10 +94,14 @@ s;
 
 				foreach ($developer_tasks as $developer_task_data) {
 
-					$developer_task_width = $hours_width * $developer_task_data['HoursEstimated'] + $hours_gutter * ($developer_task_data['HoursEstimated'] - 1);
+					if ($developer_task_data['HoursEstimated'] >= $developer_task_data['HoursSpent']) {
+						$developer_task_width = $hours_width * $developer_task_data['HoursEstimated'] + $hours_gutter * ($developer_task_data['HoursEstimated'] - 1);
+					} else {
+						$developer_task_width = $hours_width * $developer_task_data['HoursSpent'] + $hours_gutter * ($developer_task_data['HoursSpent'] - 1);
+					}
 
 					echo <<<s
-					<div class="task {$developer_task_data['Colour']}" style="width: {$developer_task_width}px;" title="{$developer_task_data['Description']}">{$developer_task_data['Description']}</div>
+					<div class="task {$developer_task_data['Colour']}" data-hours-estimated="{$developer_task_data['HoursEstimated']}" data-hours-spent="{$developer_task_data['HoursSpent']}" style="width: {$developer_task_width}px;" title="{$developer_task_data['Description']}">{$developer_task_data['Description']}</div>
 s;
 
 				}
