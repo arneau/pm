@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-07 14:02:37 +0000
+# Generation Time: 2016-07-11 14:29:03 +0000
 # ************************************************************
 
 
@@ -22,6 +22,19 @@
 
 # Dump of table task
 # ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `task`;
+
+CREATE TABLE `task` (
+  `colour` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `developer` varchar(255) NOT NULL,
+  `hours_estimated` decimal(5,2) NOT NULL,
+  `hours_spent` decimal(5,2) DEFAULT NULL,
+  `priority` decimal(5,2) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
@@ -85,8 +98,8 @@ VALUES
 	('dark_green','Shop blocks','Arneau',1.00,NULL,2.00,63),
 	('dark_green','Promo blocks','Arneau',1.00,NULL,2.00,64),
 	('dark_green','CMS: Various pages','Arneau',4.00,NULL,6.00,66),
-	('','','Arneau',0.00,4.00,1.10,67),
-	('dark_green','Dispatching: Picking page','Arneau',12.00,NULL,1.92,68),
+	('red','PM development, tasks, discussion','Arneau',0.00,4.00,1.10,67),
+	('dark_green','Dispatching: Picking page','Arneau',12.00,NULL,1.95,68),
 	('dark_green','Success pages','Arneau',2.00,NULL,8.00,69),
 	('dark_green','Account: Dashboard','Arneau',3.00,NULL,9.00,70),
 	('dark_green','Account: Orders','Arneau',1.00,NULL,9.00,71),
@@ -148,9 +161,21 @@ VALUES
 	('red','Sales meeting','Niko',0.00,2.00,1.00,127),
 	('dark_blue','Groups: Table page','Julien',4.00,NULL,1.00,128),
 	('red','Modified files script','Arneau',0.00,1.00,1.80,129),
-	('red','Pargo shipment submissions','Arneau',0.00,1.00,1.80,130),
-	('dark_green','Dispatching: Packing page','Arneau',4.00,NULL,1.91,131),
-	('red','JBL subscriber campaign','Arneau',0.00,2.00,1.80,132);
+	('red','Facebook share images','Arneau',0.00,1.00,1.80,130),
+	('dark_green','Dispatching: Packing page','Arneau',4.00,NULL,1.85,131),
+	('red','JBL subscriber campaign','Arneau',0.00,2.00,1.80,132),
+	('light_orange','Vincents discussion','Niko',0.00,3.00,1.30,133),
+	('','','Niko',0.00,7.00,1.50,134),
+	('light_purple','Shipping service specification','Niko',0.00,4.00,1.80,135),
+	('red','Sales meeting','Niko',0.00,1.00,1.60,136),
+	('red','JBL subscriber campaign','Arneau',0.00,1.00,1.90,137),
+	('red','Affiliate.co.za and Vouchercloud tracking pixel','Arneau',0.00,1.00,1.90,138),
+	('','','Arneau',2.00,NULL,1.90,139),
+	('red','Twitter sharing issues','Arneau',0.00,1.00,1.90,140),
+	('red','MyGate payment issues','Arneau',0.00,1.00,1.90,141),
+	('red','PM update','Arneau',0.00,1.00,1.90,142),
+	('red','PM update','Niko',0.00,1.00,1.70,143),
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,1.90,144);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
