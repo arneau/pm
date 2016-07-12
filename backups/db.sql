@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-11 14:29:03 +0000
+# Generation Time: 2016-07-12 14:24:34 +0000
 # ************************************************************
 
 
@@ -99,7 +99,7 @@ VALUES
 	('dark_green','Promo blocks','Arneau',1.00,NULL,2.00,64),
 	('dark_green','CMS: Various pages','Arneau',4.00,NULL,6.00,66),
 	('red','PM development, tasks, discussion','Arneau',0.00,4.00,1.10,67),
-	('dark_green','Dispatching: Picking page','Arneau',12.00,NULL,1.95,68),
+	('dark_green','Dispatching: Picking page','Arneau',2.00,NULL,1.95,68),
 	('dark_green','Success pages','Arneau',2.00,NULL,8.00,69),
 	('dark_green','Account: Dashboard','Arneau',3.00,NULL,9.00,70),
 	('dark_green','Account: Orders','Arneau',1.00,NULL,9.00,71),
@@ -175,7 +175,14 @@ VALUES
 	('red','MyGate payment issues','Arneau',0.00,1.00,1.90,141),
 	('red','PM update','Arneau',0.00,1.00,1.90,142),
 	('red','PM update','Niko',0.00,1.00,1.70,143),
-	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,1.90,144);
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,1.90,144),
+	('dark_green','Dispatching: Picking page','Arneau',10.00,NULL,1.99,145),
+	('red','JBL subscriber campaign','Arneau',0.00,1.00,1.95,146),
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.50,1.95,147),
+	('yellow','Payments: Database design','Arneau',0.00,0.50,1.95,148),
+	('light_purple','Shipping service specification','Arneau',0.00,1.50,1.95,149),
+	('red','Marketing meeting','Arneau',0.00,1.00,1.95,150),
+	('red','Subscriber investigation','Arneau',0.00,0.50,1.95,151);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
