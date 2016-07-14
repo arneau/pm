@@ -94,10 +94,10 @@ s;
 
 				foreach ($developer_tasks as $developer_task_data) {
 
-					if ($developer_task_data['HoursEstimated'] >= $developer_task_data['HoursSpent']) {
-						$developer_task_width = $hours_width * $developer_task_data['HoursEstimated'] + $hours_gutter * ($developer_task_data['HoursEstimated'] - 1);
-					} else {
+					if ($developer_task_data['HoursSpent'] * 1) {
 						$developer_task_width = $hours_width * $developer_task_data['HoursSpent'] + $hours_gutter * ($developer_task_data['HoursSpent'] - 1);
+					} else {
+						$developer_task_width = $hours_width * $developer_task_data['HoursEstimated'] + $hours_gutter * ($developer_task_data['HoursEstimated'] - 1);
 					}
 
 					echo <<<s

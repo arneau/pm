@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-12 14:24:34 +0000
+# Generation Time: 2016-07-14 12:47:43 +0000
 # ************************************************************
 
 
@@ -44,13 +44,13 @@ VALUES
 	('dark_green','Shop blocks','Niko',6.00,6.00,1.00,1),
 	('dark_green','Promo blocks','Niko',2.00,3.00,1.20,3),
 	('dark_green','Success pages','Niko',3.00,NULL,3.00,4),
-	('yellow','Payments: Endpoints','Niko',12.00,NULL,2.25,5),
+	('red','Michal PC Setup','Niko',0.00,3.00,2.20,5),
 	('dark_green','Checkout: Address completion','Niko',12.00,NULL,4.00,6),
 	('dark_green','Account: Dashboard','Niko',2.00,NULL,5.00,8),
 	('dark_green','Account: Orders','Niko',2.00,NULL,5.00,9),
 	('dark_green','Account: Order','Niko',3.00,NULL,5.00,10),
 	('yellow','Payments: Integrations','Arneau',30.00,NULL,7.00,11),
-	('yellow','Payments: Database design','Niko',12.00,NULL,2.00,12),
+	('yellow','Payments: Database design','Niko',6.00,3.00,2.00,12),
 	('yellow','Subscriptions: Database design','Niko',1.00,NULL,6.00,13),
 	('dark_green','Subscriptions: Popup','Niko',4.00,NULL,6.00,14),
 	('dark_green','Contact Us: Popup','Niko',2.00,NULL,7.00,15),
@@ -95,8 +95,8 @@ VALUES
 	('dark_green','Previous deals: Headings','Arneau',1.00,NULL,4.00,60),
 	('dark_green','Blog: Posts page','Arneau',1.00,NULL,5.00,61),
 	('dark_green','Blog: Post page','Arneau',1.00,NULL,5.00,62),
-	('dark_green','Shop blocks','Arneau',1.00,NULL,2.00,63),
-	('dark_green','Promo blocks','Arneau',1.00,NULL,2.00,64),
+	('dark_green','Shop blocks','Arneau',1.00,NULL,2.50,63),
+	('dark_green','Promo blocks','Arneau',1.00,NULL,2.50,64),
 	('dark_green','CMS: Various pages','Arneau',4.00,NULL,6.00,66),
 	('red','PM development, tasks, discussion','Arneau',0.00,4.00,1.10,67),
 	('dark_green','Dispatching: Picking page','Arneau',2.00,NULL,1.95,68),
@@ -176,13 +176,18 @@ VALUES
 	('red','PM update','Arneau',0.00,1.00,1.90,142),
 	('red','PM update','Niko',0.00,1.00,1.70,143),
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,1.90,144),
-	('dark_green','Dispatching: Picking page','Arneau',10.00,NULL,1.99,145),
+	('dark_green','Dispatching: Picking page','Arneau',10.00,NULL,2.40,145),
 	('red','JBL subscriber campaign','Arneau',0.00,1.00,1.95,146),
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.50,1.95,147),
 	('yellow','Payments: Database design','Arneau',0.00,0.50,1.95,148),
 	('light_purple','Shipping service specification','Arneau',0.00,1.50,1.95,149),
 	('red','Marketing meeting','Arneau',0.00,1.00,1.95,150),
-	('red','Subscriber investigation','Arneau',0.00,0.50,1.95,151);
+	('red','Subscriber investigation','Arneau',0.00,0.50,1.95,151),
+	('yellow','Payments: Queries','Niko',6.00,3.00,2.10,152),
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.00,153),
+	('red','Pargo investigation','Arneau',0.00,0.50,2.00,154),
+	('red','PM update','Arneau',0.00,1.00,2.00,155),
+	('yellow','Payments: Endpoints','Niko',12.00,NULL,2.25,156);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
