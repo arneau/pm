@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-14 12:47:43 +0000
+# Generation Time: 2016-07-15 11:44:55 +0000
 # ************************************************************
 
 
@@ -176,7 +176,7 @@ VALUES
 	('red','PM update','Arneau',0.00,1.00,1.90,142),
 	('red','PM update','Niko',0.00,1.00,1.70,143),
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,1.90,144),
-	('dark_green','Dispatching: Picking page','Arneau',10.00,NULL,2.40,145),
+	('dark_green','Dispatching: Picking page','Arneau',3.00,NULL,2.20,145),
 	('red','JBL subscriber campaign','Arneau',0.00,1.00,1.95,146),
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.50,1.95,147),
 	('yellow','Payments: Database design','Arneau',0.00,0.50,1.95,148),
@@ -187,7 +187,15 @@ VALUES
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.00,153),
 	('red','Pargo investigation','Arneau',0.00,0.50,2.00,154),
 	('red','PM update','Arneau',0.00,1.00,2.00,155),
-	('yellow','Payments: Endpoints','Niko',12.00,NULL,2.25,156);
+	('yellow','Payments: Endpoints','Niko',12.00,NULL,2.25,156),
+	('red','MacBook migration','Arneau',0.00,0.50,2.00,157),
+	('dark_green','Dispatching: Picking page','Arneau',7.00,4.00,2.35,158),
+	('red','MacBook setup','Arneau',0.00,1.00,2.30,159),
+	('light_purple','Payments: Discussion','Arneau',0.00,0.50,2.30,160),
+	('dark_green','Dispatching: Batching page','Arneau',4.00,NULL,2.40,161),
+	('','','Arneau',0.00,1.50,2.40,162),
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.35,163),
+	('red','GA discussion','Arneau',0.00,0.50,2.30,164);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
