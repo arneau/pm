@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-15 11:44:55 +0000
+# Generation Time: 2016-07-20 13:43:30 +0000
 # ************************************************************
 
 
@@ -95,8 +95,8 @@ VALUES
 	('dark_green','Previous deals: Headings','Arneau',1.00,NULL,4.00,60),
 	('dark_green','Blog: Posts page','Arneau',1.00,NULL,5.00,61),
 	('dark_green','Blog: Post page','Arneau',1.00,NULL,5.00,62),
-	('dark_green','Shop blocks','Arneau',1.00,NULL,2.50,63),
-	('dark_green','Promo blocks','Arneau',1.00,NULL,2.50,64),
+	('dark_green','Shop blocks','Arneau',1.00,NULL,3.00,63),
+	('dark_green','Promo blocks','Arneau',1.00,NULL,3.00,64),
 	('dark_green','CMS: Various pages','Arneau',4.00,NULL,6.00,66),
 	('red','PM development, tasks, discussion','Arneau',0.00,4.00,1.10,67),
 	('dark_green','Dispatching: Picking page','Arneau',2.00,NULL,1.95,68),
@@ -187,15 +187,42 @@ VALUES
 	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.00,153),
 	('red','Pargo investigation','Arneau',0.00,0.50,2.00,154),
 	('red','PM update','Arneau',0.00,1.00,2.00,155),
-	('yellow','Payments: Endpoints','Niko',12.00,NULL,2.25,156),
+	('yellow','Payments: Endpoints','Niko',3.00,3.00,2.25,156),
 	('red','MacBook migration','Arneau',0.00,0.50,2.00,157),
 	('dark_green','Dispatching: Picking page','Arneau',7.00,4.00,2.35,158),
 	('red','MacBook setup','Arneau',0.00,1.00,2.30,159),
 	('light_purple','Payments: Discussion','Arneau',0.00,0.50,2.30,160),
-	('dark_green','Dispatching: Batching page','Arneau',4.00,NULL,2.40,161),
+	('dark_green','Dispatching: Batching page','Arneau',2.00,NULL,2.40,161),
 	('','','Arneau',0.00,1.50,2.40,162),
-	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.35,163),
-	('red','GA discussion','Arneau',0.00,0.50,2.30,164);
+	('red','CourierIt testing, correspondence','Arneau',0.00,2.00,2.35,163),
+	('red','GA discussion','Arneau',0.00,0.50,2.30,164),
+	('','','Niko',0.00,3.00,2.25,165),
+	('yellow','Payments: Endpoints','Niko',9.00,NULL,2.25,166),
+	('yellow','Payments: Integrations','Niko',0.00,4.00,2.40,167),
+	('red','Xia iMac setup','Niko',0.00,1.50,2.25,168),
+	('red','Mandela Day','Niko',0.00,0.50,2.25,169),
+	('red','PM Update','Niko',0.00,1.00,2.25,170),
+	('red','Newsletter investigation','Arneau',0.00,0.50,2.35,171),
+	('dark_green','Dispatching: Batching page','Arneau',3.00,NULL,2.45,172),
+	('red','Subscriber campaign updates','Arneau',0.00,0.50,2.40,173),
+	('red','CourierIt testing, correspondence','Arneau',0.00,1.00,2.40,174),
+	('red','PM Update','Arneau',0.00,1.00,2.40,175),
+	('red','Alexis discussion, correspondence','Arneau',0.00,0.50,2.40,176),
+	('red','DSV tracking investigation','Arneau',0.00,0.50,2.40,177),
+	('dark_green','Dispatching: Pages discussion','Arneau',1.00,NULL,2.48,178),
+	('red','MyGate meeting','Arneau',0.00,0.50,2.48,179),
+	('red','PM update','Arneau',0.00,0.50,2.48,180),
+	('red','JBL subscriber campaign','Arneau',0.00,0.50,2.47,181),
+	('red','DOI follow ups','Arneau',0.00,1.50,2.48,182),
+	('red','PM update','Arneau',0.00,1.00,2.47,183),
+	('red','CourierIt testing, correspondence','Arneau',0.00,0.50,2.47,185),
+	('red','Shop updates','Arneau',0.00,0.50,2.50,186),
+	('red','CourierIt testing, correspondence','Arneau',0.00,0.50,2.50,187),
+	('red','DSV cost comparison','Arneau',0.00,1.00,2.50,188),
+	('red','PM update','Arneau',0.00,0.50,2.50,189),
+	('red','Product tiles update','Arneau',0.00,1.00,2.50,190),
+	('red','DSV cost comparison investigation','Arneau',0.00,1.00,2.50,191),
+	('dark_green','Dispatching: Pages updates','Arneau',0.00,1.50,2.50,192);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
