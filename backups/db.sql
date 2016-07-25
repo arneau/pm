@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.50)
 # Database: pm
-# Generation Time: 2016-07-20 13:43:30 +0000
+# Generation Time: 2016-07-25 11:17:31 +0000
 # ************************************************************
 
 
@@ -51,11 +51,11 @@ VALUES
 	('dark_green','Account: Order','Niko',3.00,NULL,5.00,10),
 	('yellow','Payments: Integrations','Arneau',30.00,NULL,7.00,11),
 	('yellow','Payments: Database design','Niko',6.00,3.00,2.00,12),
-	('yellow','Subscriptions: Database design','Niko',1.00,NULL,6.00,13),
-	('dark_green','Subscriptions: Popup','Niko',4.00,NULL,6.00,14),
+	('yellow','Subscriptions: Database design','Niko',1.00,NULL,2.45,13),
+	('dark_green','Subscriptions: Popup','Niko',1.50,NULL,2.48,14),
 	('dark_green','Contact Us: Popup','Niko',2.00,NULL,7.00,15),
 	('dark_green','Contact Us: Integration','Niko',2.00,NULL,7.00,16),
-	('dark_green','Subscriptions: Integration','Niko',2.00,NULL,6.00,17),
+	('yellow','Subscriptions: Integration','Niko',1.00,NULL,2.45,17),
 	('yellow','Testimonials: Database design','Niko',1.00,NULL,8.00,18),
 	('dark_green','Testimonials: Integration','Niko',1.00,NULL,8.00,19),
 	('dark_green','Products: Variations','Niko',2.00,NULL,9.00,20),
@@ -198,7 +198,7 @@ VALUES
 	('red','GA discussion','Arneau',0.00,0.50,2.30,164),
 	('','','Niko',0.00,3.00,2.25,165),
 	('yellow','Payments: Endpoints','Niko',9.00,NULL,2.25,166),
-	('yellow','Payments: Integrations','Niko',0.00,4.00,2.40,167),
+	('yellow','Payments: Integrations','Niko',0.00,9.00,2.40,167),
 	('red','Xia iMac setup','Niko',0.00,1.50,2.25,168),
 	('red','Mandela Day','Niko',0.00,0.50,2.25,169),
 	('red','PM Update','Niko',0.00,1.00,2.25,170),
@@ -222,7 +222,27 @@ VALUES
 	('red','PM update','Arneau',0.00,0.50,2.50,189),
 	('red','Product tiles update','Arneau',0.00,1.00,2.50,190),
 	('red','DSV cost comparison investigation','Arneau',0.00,1.00,2.50,191),
-	('dark_green','Dispatching: Pages updates','Arneau',0.00,1.50,2.50,192);
+	('dark_green','Dispatching: Pages updates','Arneau',0.00,3.00,2.50,192),
+	('red','Signup process fixes','Arneau',0.00,1.00,2.50,193),
+	('yellow','Payments: Integrations','Arneau',0.00,2.00,2.50,194),
+	('red','UX discussion','Arneau',0.00,1.00,2.50,195),
+	('red','Laurian\'s mom\'s website','Arneau',0.00,0.50,2.60,196),
+	('red','Product sales importing','Arneau',0.00,0.50,2.60,197),
+	('red','APO updates','Arneau',0.00,0.50,2.60,198),
+	('red','SweepSouth','Arneau',0.00,2.00,2.60,199),
+	('','','Arneau',0.00,0.50,2.50,200),
+	('','','Niko',0.00,6.00,2.40,201),
+	('yellow','API maintenance','Niko',0.00,2.00,2.40,202),
+	('yellow','Payments: Integrations','Niko',0.00,2.00,2.40,203),
+	('red','Mandela Day profit stats','Niko',0.00,1.00,2.40,204),
+	('red','APO shop block','Niko',0.00,1.00,2.40,205),
+	('red','PM update','Arneau',0.00,0.50,2.60,206),
+	('red','Subscription design','Arneau',0.00,0.50,2.60,207),
+	('red','Courier discussion','Arneau',0.00,0.50,2.60,208),
+	('','','Arneau',0.00,1.00,2.60,209),
+	('red','SweepSouth','Arneau',0.00,0.50,2.60,210),
+	('red','Vouchers creation, updates','Arneau',0.00,0.50,2.60,211),
+	('red','PM update','Arneau',0.00,0.50,2.60,212);
 
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
